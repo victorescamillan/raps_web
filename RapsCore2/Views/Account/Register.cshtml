@@ -1,0 +1,230 @@
+﻿@model RapsCore2.Models.MemberViewModel.SaveMemberViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_RegisterLayout.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Registration</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Account" asp-action="Login">Login</a>
+            </li>
+            <li class="active">
+                <strong>Registration</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+@*<hr />*@
+<br />
+<div class="row">
+    @if (ViewBag.Member_Id == 0)
+    {
+        <div class="ibox-content">
+            <div class="alert alert-danger alert-dismissable">
+                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                Register Failed. <a class="alert-link" href="#">@ViewBag.Result</a>.
+            </div>
+        </div>
+    }
+    else if (ViewBag.Member_Id > 0)
+    {
+        <div class="ibox-content">
+            <div class="alert alert-info alert-dismissable">
+                <button aria-hidden="true" data-dismiss="alert" class="close" type="button">×</button>
+                Register Failed. <a class="alert-link" href="#">@ViewBag.Result</a>.
+            </div>
+        </div>
+
+    }
+
+    <form asp-action="Register">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Member Info
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Last Name</label>
+                        <input asp-for="Lname" class="form-control" value="" />
+                        <span asp-validation-for="Lname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">First Name</label>
+                        <input asp-for="Fname" class="form-control" value="" />
+                        <span asp-validation-for="Fname" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Mi" class="control-label"></label>
+                        <input asp-for="Mi" class="form-control" value="" />
+                        <span asp-validation-for="Mi" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Birthdate" class="control-label"></label>
+                        <input asp-for="Birthdate" class="form-control" />
+                        <span asp-validation-for="Birthdate" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Beneficiary" class="control-label"></label>
+                        <input asp-for="Beneficiary" class="form-control" value="" />
+                        <span asp-validation-for="Beneficiary" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" value="" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="City" class="control-label"></label>
+                        <input asp-for="City" class="form-control" value="" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Province" class="control-label"></label>
+                        <input asp-for="Province" class="form-control" value="" />
+                        <span asp-validation-for="Province" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ZipCode" class="control-label"></label>
+                        <input asp-for="ZipCode" class="form-control" value="" />
+                        <span asp-validation-for="ZipCode" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ContactNo" class="control-label"></label>
+                        <input asp-for="ContactNo" class="form-control" value="" />
+                        <span asp-validation-for="ContactNo" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Gender" class="control-label"></label>
+                        <select class="form-control m-b" asp-for="Gender">
+                            <option></option>
+                            <option>Male</option>
+                            <option>Female</option>
+                        </select>
+                        <span asp-validation-for="Gender" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" value="" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="BankAccount" class="control-label"></label>
+                        <input asp-for="BankAccount" class="form-control" value="" />
+                        <span asp-validation-for="BankAccount" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="TinNo" class="control-label"></label>
+                        <input asp-for="TinNo" class="form-control" value="" />
+                        <span asp-validation-for="TinNo" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Sponsor Info
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Direct Sponsor ID</label>
+                        <input asp-for="SponsorId" class="form-control" value="@ViewBag.Sponsor_Id" />
+                        <span asp-validation-for="SponsorId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Sponsor Name</label>
+                        <input disabled="disabled" class="form-control" value="@ViewBag.Sponsor_Name" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Binary Placement
+                </div>
+                <div class="panel-body">
+                    <div class="placement"> 
+                        <div class="radio">
+                            <label><input type="radio" name="placement">Left</label>
+                        </div>
+                        <div class="radio">
+                            <label><input type="radio" name="placement">Right</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Sponsor ID</label>
+                        <input asp-for="SponsorId" class="form-control" value="@ViewBag.Binary_Sponsor_Id" />
+                        <span asp-validation-for="SponsorId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Sponsor Name</label>
+                        <input disabled="disabled" class="form-control" value="@ViewBag.Binary_Sponsor_Name" />
+                    </div>
+                </div>
+
+            </div>
+         
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Login Info
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label asp-for="Username" class="control-label"></label>
+                        <input asp-for="Username" class="form-control" value="" />
+                        <span asp-validation-for="Username" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" placeholder="Atlease 4 characters" value="" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Confirm Password</label>
+                        <input asp-for="ConfirmPassword" class="form-control" placeholder="Atlease 4 characters" value="" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    Purchase Info
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label class="control-label">Pin Code</label>
+                        <input asp-for="pin_code" class="form-control" />
+                        <span asp-validation-for="pin_code" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Product Code</label>
+                        <input asp-for="product_code" class="form-control" />
+                        <span asp-validation-for="product_code" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-lg btn-primary block full-width m-b"><i class="fa fa-user-plus"></i> Register</button>
+            </div>
+        </div>
+    </form>
+</div>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+
+
+
+

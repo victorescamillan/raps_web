@@ -1,0 +1,143 @@
+﻿
+@{
+    ViewData["Title"] = "ReferralBonus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row wrapper page-heading">
+    <div class="col-lg-12">
+        <br />
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="active">
+                <strong>Referral Bonus</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <div class="list-group">
+                    <a class="list-group-item active" href="#">
+                        <h3 class="list-group-item-heading">Direct & Indirect Recruits Referral Bonus (Levels 1 to 15)</h3>
+                        <p>
+                            Distributors earns from its Direct recruits and Indirect recruits up to Level 15. Assuming you have sponsored directly 5 members and likewise they’ve recruited 5, and down the 15th level, your projected income:
+                        </p>
+                    </a>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>LEVEL</th>
+                            <th class="text-center">NO. OF RECRUITS</th>
+                            <th class="text-right">BONUS</th>
+                            <th class="text-right">POTENTIAL INCOME</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1 <span class="text-danger font-bold"> DIRECT</span></td>
+                            <td class="text-center">5</td>
+                            <td class="text-right">₱ 300.00</td>
+                            <td class="text-right">₱ 1,500.00</td>
+                        </tr>
+                        <tr>
+                            <td>2 <span class="text-navy font-bold"> INDIRECT</span></td>
+                            <td class="text-center">25</td>
+                            <td class="text-right">40.00</td>
+                            <td class="text-right">1,000.00</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td class="text-center">125</td>
+                            <td class="text-right">15.00</td>
+                            <td class="text-right">1,875.00</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td class="text-center">625</td>
+                            <td class="text-right">15.00</td>
+                            <td class="text-right">9,375.00</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td class="text-center">3,125</td>
+                            <td class="text-right">15.00</td>
+                            <td class="text-right">46,875.00</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td class="text-center">15,625</td>
+                            <td class="text-right">10.00</td>
+                            <td class="text-right">156,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td class="text-center">78,125</td>
+                            <td class="text-right">10.00</td>
+                            <td class="text-right">781,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="text-center">390,625</td>
+                            <td class="text-right">10.00</td>
+                            <td class="text-right">3,906,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td class="text-center">390,625</td>
+                            <td class="text-right">10.00</td>
+                            <td class="text-right">3,906,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td class="text-center">1,953,125</td>
+                            <td class="text-right">10.00</td>
+                            <td class="text-right">19,531,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td class="text-center">9,765,625</td>
+                            <td class="text-right">10.00</td>
+                            <td class="text-right">97,656,250.00</td>
+                        </tr>
+                        <tr>
+                            <td>11</td>
+                            <td class="text-center">48,828,125</td>
+                            <td class="text-right">5.00</td>
+                            <td class="text-right">244,140,625.00</td>
+                        </tr>
+                        <tr>
+                            <td>12</td>
+                            <td class="text-center">244,140,625</td>
+                            <td class="text-right">5.00</td>
+                            <td class="text-right">1,220,703,125.00</td>
+                        </tr>
+                        <tr>
+                            <td>13</td>
+                            <td class="text-center">1,220,703,125</td>
+                            <td class="text-right">5.00</td>
+                            <td class="text-right">6,103,515,625.00</td>
+                        </tr>
+                        <tr>
+                            <td>14</td>
+                            <td class="text-center">6,103,515,625</td>
+                            <td class="text-right">5.00</td>
+                            <td class="text-right">30,517,578,125.00</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td class="text-center">30,517,578,125</td>
+                            <td class="text-right">5.00</td>
+                            <td class="text-right">152,587,890,625.00</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

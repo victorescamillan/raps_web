@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "~/Views/Shared/_AdminDashboard.cshtml";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-success pull-right">All</span>
+                    <h5>Total Members</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.MemberCount</h1>
+                    <div class="stat-percent font-bold text-success"><i class="fa fa-bolt"></i></div>
+                    @*<small>1st to 15th Level</small>*@
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-info pull-right">All</span>
+                    <h5>Junior Stockist</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.JuniorMember</h1>
+                    <div class="stat-percent font-bold text-info"><i class="fa fa-level-up"></i></div>
+                    @*<small>First Level</small>*@
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-info pull-right">All</span>
+                    <h5>Senior Stockist</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.SeniorMember</h1>
+                    <div class="stat-percent font-bold text-info"><i class="fa fa-level-up"></i></div>
+                    @*<small>First Level</small>*@
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <span class="label label-info pull-right">All</span>
+                    <h5>Mega Stockist</h5>
+                </div>
+                <div class="ibox-content">
+                    <h1 class="no-margins">@ViewBag.MegaMember</h1>
+                    <div class="stat-percent font-bold text-info"><i class="fa fa-level-up"></i></div>
+                    @*<small>First Level</small>*@
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+@section Scripts{
+    <script>
+
+        $(document).ready(function () {
+            $('#side-menu li').each(function () {
+                $(this).removeClass('active');
+            });
+            $('#dashboard').addClass('active');
+            
+        });
+    </script>
+}

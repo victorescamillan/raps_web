@@ -1,0 +1,105 @@
+﻿.slick_demo_2 .ibox-content {
+    margin: 0 10px;
+}
+/*.ibox-content #carousel2 {
+    height: 236px;
+}*/
+
+#register{
+    background:white;
+}
+#accordion .panel .panel-title{
+    float:left;
+}
+#accordion .panel .level-count {
+    display: block;
+    text-align: right;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
+#about h3, #intro h4, #product h4{
+    line-height: 2;
+}
+
+#unilevel tbody tr td{
+    vertical-align: middle;
+    font-size: 15px;
+}
+#reward-program {
+    margin-top: 0px;
+}
+#bronze {
+    background-color: #9c5209;
+}
+#silver {
+    background-color: #c3c0c0;
+}
+#gold {
+    background-color: #d4a814;
+}
+#diamond {
+    background-color: #c1b681;
+}
+#product-image .image-imitation {
+    padding: 10px;
+}
+
+#product-image img {
+    height: 100%;
+    width: 100%;
+}
+#register-here a{
+    color:white;
+}
+#product-descrip p{
+    font-size:14px;
+}
+#product-wrapper{
+    border:none;
+}
+#edit-profile {
+    text-align: center;
+}
+#edit-profile a{
+    color:white;
+}
+#output {
+   width:100%;
+}
+#page-top #logo img {
+    width: 13%;
+    margin-bottom: -55px;
+}
+#mxg img, #spiru img, #xtrim img {
+    width: 100%;
+}
+.product-list {
+    padding: 10px;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.widget.yellow-bg.p-lg.text-center.no-timeframe {
+    width: 300px;
+    margin: auto;
+    padding: 0px;
+}
+.elite-ranking td.no-borders {
+    font-size: 130%;
+}
+.row.elite-intro {
+    padding: 20px;
+    /* background: #e7f332; */
+    margin: 15px;
+    /* border-radius: 20%; */
+}
+
+.text-strong{
+    font-weight: 700;   
+}
+.placement .radio {
+    display: inline-block;
+    margin-right: 20px;
+}

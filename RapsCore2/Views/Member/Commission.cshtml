@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RapsCore2.Models.MemberViewModel.EncashmentRequestViewModel>
+@{
+    ViewData["Title"] = "Commission";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <br />
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Member" asp-action="Dashboard">Dashboard</a>
+            </li>
+            <li class="active">
+                <strong>Commission</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Payment </th>
+                <th>Gross </th>
+                <th>Tax </th>
+                <th>Net</th>
+                <th>Remarks</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.date_requested.ToString("MMMM dd, yyyy")</td>
+                    <td>@item.type</td>
+                    <td>@item.gross</td>
+                    <td>@item.tax</td>
+                    <td>@item.net</td>
+                    <td>@item.remarks</td>
+                    <td><button class="btn btn-primary btn-circle" type="button"><i class="fa fa-list"></i></button></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@section Scripts{
+    <script>
+
+        $(document).ready(function () {
+            $('#side-menu li').each(function () {
+                $(this).removeClass('active');
+            });
+            $('#commission').addClass('active');
+
+        });
+    </script>
+}

@@ -1,0 +1,96 @@
+D:\Thor Files\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+D:\Thor Files\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+D:\Thor Files\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+D:\Thor Files\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+D:\Thor Files\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+D:\Thor Files\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+D:\Thor Files\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+D:\Thor Files\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Thor Files\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+D:\Thor Files\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+D:\Thor Files\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+D:\Thor Files\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb
+E:\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+E:\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+E:\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+E:\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+E:\RapsCore2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+E:\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+E:\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+E:\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+E:\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+E:\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+E:\RapsCore2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+C:\Users\thor\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb
+E:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+E:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+E:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+E:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+E:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+E:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+E:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+E:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+E:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+E:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+E:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+E:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb
+F:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+F:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+F:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+F:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+F:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+F:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+F:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+F:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+F:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+F:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+F:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+F:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+C:\Users\JED\Desktop\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb
+D:\RAPS\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+D:\RAPS\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+D:\RAPS\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+D:\RAPS\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+D:\RAPS\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+D:\RAPS\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+D:\RAPS\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+D:\RAPS\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\RAPS\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+D:\RAPS\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+D:\RAPS\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+D:\RAPS\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb
+D:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.deps.json
+D:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.json
+D:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.runtimeconfig.dev.json
+D:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.dll
+D:\Raps Core 2\RapsCore2\bin\Release\netcoreapp2.0\RapsCore2.pdb
+D:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csprojResolveAssemblyReference.cache
+D:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.csproj.CoreCompileInputs.cache
+D:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\UserSecretsAssemblyInfo.cs
+D:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfoInputs.cache
+D:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.AssemblyInfo.cs
+D:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.dll
+D:\Raps Core 2\RapsCore2\obj\Release\netcoreapp2.0\RapsCore2.pdb

@@ -1,0 +1,650 @@
+﻿@model IEnumerable<RapsCore2.Models.MemberViewModel.GenealogyViewModel>
+@{
+    ViewData["Title"] = "Genealogy";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <br />
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Member" asp-action="Dashboard">Dashboard</a>
+            </li>
+            <li class="active">
+                <strong>Genealogy</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="ibox-content">
+                <div class="panel-body">
+                    <div class="panel-group" id="accordion">
+                        @if (Model.Where(e => e.level == 1).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">1st Level</a>
+                                    </h5>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 1).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 1).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 2).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">2nd Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 2).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 2).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 3).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">3rd Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 3).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 3).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 4).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse4">4th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 4).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse4" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 4).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 5).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse5">5th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 5).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse5" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 5).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        @if (Model.Where(e => e.level == 6).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse6">6th Level</a>
+                                    </h5>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 6).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse6" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 6).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 7).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse7">7th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 7).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse7" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 7).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 8).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse8">8th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 8).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse8" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 8).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 9).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse9">9th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 9).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse9" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 9).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 10).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse10">10th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 10).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse10" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 10).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                        @if (Model.Where(e => e.level == 11).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse11">11th Level</a>
+                                    </h5>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 11).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse11" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 11).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 12).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse12">12th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 12).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse12" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 12).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 13).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse13">13th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 13).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse13" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 13).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 14).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse14">14th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 14).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse14" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 14).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        @if (Model.Where(e => e.level == 15).Count() > 0)
+                        {
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse15">15th Level</a>
+                                    </h4>
+                                    <div class="level-count">
+                                        <span class="badge badge-primary">@Model.Where(e => e.level == 15).Count()</span>
+                                    </div>
+                                </div>
+                                <div id="collapse15" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <table class="table table-striped table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID No.</th>
+                                                    <th>Downline</th>
+                                                    <th>Level</th>
+                                                </tr>
+                                            </thead>                                            
+                                            <tbody>
+                                                @foreach (var item in Model.Where(e => e.level == 15).OrderBy(e => e.downline_lname))
+                                                {
+                                                    <tr class="gradeU">
+                                                        <td>@item.downline_id</td>
+                                                        <td>@item.downline_lname, @item.downline_fname  @item.downline_mi</td>
+                                                        <td>@item.level</td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        @*<div class="col-lg-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-content">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-hover dataTables-example">
+                                <thead>
+                                    <tr>
+                                        <th>ID No.</th>
+                                        <th>Downline</th>
+                                        <th>Level</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr class="gradeU">
+                                            <td>@item.downline_id</td>
+                                            <td>@item.downline_fname @item.downline_lname</td>
+                                            <td>@item.level</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+    </div>
+</div>
+@section Scripts{
+    <script src="~/js/plugins/dataTables/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dataTables-example').DataTable({
+                pageLength: 10,
+                responsive: true,
+                dom: '<"html5buttons"B>lTfgitp',
+                buttons: [
+                    { extend: 'copy' },
+                    { extend: 'csv' },
+                    { extend: 'excel', title: 'ExampleFile' },
+                    { extend: 'pdf', title: 'ExampleFile' },
+
+                    {
+                        extend: 'print',
+                        customize: function (win) {
+                            $(win.document.body).addClass('white-bg');
+                            $(win.document.body).css('font-size', '10px');
+
+                            $(win.document.body).find('table')
+                                .addClass('compact')
+                                .css('font-size', 'inherit');
+                        }
+                    }
+                ]
+
+            });
+            $('#side-menu li').each(function () {
+                $(this).removeClass('active');
+            });
+            $('#genealogy').addClass('active');
+        });
+    </script>
+}

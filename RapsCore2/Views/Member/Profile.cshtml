@@ -1,0 +1,195 @@
+﻿@model Member;
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <br />
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Member" asp-action="Dashboard">Dashboard</a>
+            </li>
+            <li class="active">
+                <strong>Profile</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row animated fadeInRight">
+        <div class="col-md-5">
+            <div class="widget-head-color-box navy-bg p-lg text-center">
+                <div class="m-b-md">
+                    <h2 class="font-bold no-margins">
+                        @Model.Fname @Model.Lname
+                    </h2>
+                    @*<small>Founder of Groupeq</small>*@
+                </div>
+                @*<i data-toggle="modal" data-target="#uploadModal"></i>*@
+                <img src="~/images/account/member_avatar.png" class="img-circle circle-border m-b-md" alt="profile">
+                @*<div>
+                        <span>100 Tweets</span> |
+                        <span>350 Following</span> |
+                        <span>610 Followers</span>
+                    </div>*@
+            </div>
+            <div class="widget-text-box">
+                <h4 class="media-heading"><i class="fa fa-map-marker"></i> @Model.Address, @Model.City, @Model.Province </h4>
+                <br />
+                <p><i class="fa fa-mobile-phone"></i> @Model.ContactNo</p>
+                <div class="text-right">
+                    @*<a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Like </a>*@
+                    <a class="btn btn-xs btn-warning"> @ViewBag.Rank RANK</a>
+                </div>
+
+            </div>
+
+            <br />
+            <div>
+                @*<div class="bg-primary p-xs b-r-sm" id="edit-profile">
+                        <a asp-area="" asp-controller="Member" asp-action="Edit" asp-route-id="@Model.Id">EDIT PROFILE</a>
+                    </div>*@
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal5">
+                    <i class="fa fa-edit"></i> PROFILE
+                </button>
+                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                    <i class="fa fa-edit"></i> EDIT LOGIN
+                </button>
+                
+            </div>
+            <br />
+        </div>
+
+        <div class="col-md-7">
+            <div class="ibox-content">
+                <div class="project-list">
+                    <table class="table table-hover">
+                        <tbody>
+                            <tr>
+                                <td class="project-title">
+                                    <h5>Birthdate : </h5>
+                                </td>
+                                <td class="project-completion">
+                                    <h5>@Model.Birthdate</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-title">
+                                    <h5>Beneficiary : </h5>
+                                </td>
+                                <td class="project-completion">
+                                    <h5>@Model.Beneficiary</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-title">
+                                    <h5>Gender : </h5>
+                                </td>
+                                <td class="project-completion">
+                                    <h5>@Model.Gender</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-title">
+                                    <h5>Email : </h5>
+                                </td>
+                                <td class="project-completion">
+                                    <h5>@Model.Email</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-title">
+                                    <h5>Bank Account : </h5>
+                                </td>
+                                <td class="project-completion">
+                                    <h5>@Model.BankAccount</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-title">
+                                    <h5>Date Join : </h5>
+                                </td>
+                                <td class="project-completion">
+                                    <h5>@Model.DateJoin</h5>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="project-title">
+                                    <h5>Username : </h5>
+                                </td>
+                                <td class="project-completion">
+                                    <h5>@Model.Username</h5>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal inmodal fade" id="myModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                @Html.Partial("Edit")
+            </div>
+        </div>
+        <div class="modal inmodal fade" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                @Html.Partial("Edit_Login")
+            </div>
+        </div>
+        <div class="modal inmodal" id="uploadModal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content animated bounceInRight">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                            <h4 class="modal-title">Upload Image</h4>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                                <div class="form-control" data-trigger="fileinput">
+                                    <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                                    <span class="fileinput-filename"></span>
+                                </div>
+                                <span class="input-group-addon btn btn-default btn-file">
+                                    <span class="fileinput-new">Select file</span>
+                                    <span class="fileinput-exists">Change</span>
+                                    <input id="fileupload"  type="file" name="..." onchange="openFile(event)"/>
+                                </span>
+                                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
+                            </div> 
+                            <img id='output'>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
+@section Scripts{
+<script>
+        var openFile = function (event) {
+            var input = event.target;
+
+            var reader = new FileReader();
+            reader.onload = function () {
+                var dataURL = reader.result;
+                var output = document.getElementById('output');
+                output.src = dataURL;
+            };
+            reader.readAsDataURL(input.files[0]);
+        };
+</script>
+}

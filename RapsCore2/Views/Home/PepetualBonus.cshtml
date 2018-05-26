@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewData["Title"] = "PepetualBonus";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row wrapper page-heading">
+    <div class="col-lg-12">
+        <br />
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="active">
+                <strong>LIFETIME STOCKIST PURCHASE REWARDS PLAN</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <div class="list-group">
+                    <a class="list-group-item active" href="#">
+                        <h3 class="list-group-item-heading">LIFETIME STOCKIST PURCHASE REWARDS PLAN</h3>
+                        <p>Entry pack or Maintenance pack purchases by level 1 stockist  to 3rd level stockist as follows:</p>
+                    </a>
+                </div>
+                <br />
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-center text-navy"><h2 class="font-bold">Stockist</h2></th>
+                            <th class="text-right text-navy"><h2 class="font-bold">Entry Pack </h2></th>
+                            <th class="text-right text-navy"><h2 class="font-bold">Repeat Purchase</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-center"><h3>Level 1</h3></td>
+                            <td class="text-right"><h3>P 10.00/Pack</h3></td>
+                            <td class="text-right"><h3>P 5.00/Product</h3></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><h3>Level 2</h3></td>
+                            <td class="text-right"><h3> 5.00/Pack</h3></td>
+                            <td class="text-right"><h3> 3.00/Product</h3></td>
+                        </tr>
+                        <tr>
+                            <td class="text-center"><h3>Level 3</h3></td>
+                            <td class="text-right"><h3> 3.00/Pack</h3></td>
+                            <td class="text-right"><h3> 2.00/Product</h3></td>
+                        </tr>
+                  
+                    </tbody>
+                </table>
+                @*<h1 class="text-center">
+                    Referral Bonus for all purchases <span class="text-navy">(Entry or Maintenance pack)</span> <br />
+                    made by any stockists would be: <br /><br />
+                    P10.00 <span class="text-navy">(from Level 1 Stockists)</span> <br /><br />
+                    P5.00 <span class="text-navy">(from Level 2 Stockists)</span> <br /><br />
+                    P3.00 <span class="text-navy">(from Level 3 Stockists).</span>
+                </h1>*@
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - RapsCore2</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/plugins/dataTables/datatables.min.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" />
+        @*<link rel="stylesheet" href="~/css/site.css" />*@
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="~/css/plugins/dataTables/datatables.min.css" />
+        <link rel="stylesheet" href="~/css/animate.css" />
+        <link rel="stylesheet" href="~/css/style.css" />
+        @*<link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />*@
+    </environment>
+</head>
+<body>
+    <div id="wrapper">
+
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">@ViewBag.Name</strong>
+                                    </span> <span class="text-muted text-xs block">@ViewBag.Role<b class="caret"></b></span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li><a asp-area="" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            RNP
+                        </div>
+                    </li>
+                    <li id="dashboard">
+                        <a asp-area="" asp-controller="Admin" asp-action="Dashboard"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboard</span></a>
+                    </li>
+                    <li id="members">
+                        <a asp-area="" asp-controller="Admin" asp-action="Members"><i class="fa fa-user"></i> <span class="nav-label">Members</span> </a>
+                    </li>
+                    <li id="encashment">
+                        <a asp-area="" asp-controller="Admin" asp-action="Empty"><i class="fa fa-money"></i> <span class="nav-label">Encashment</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a asp-action="RequestEncashment" asp-controller="Admin"><i class="fa fa-circle-o"></i> <span class="nav-label">Request</span> </a></li>
+                            @if (ViewBag.Role == "ADMIN")
+                            {
+                                <li><a asp-action="ApprovedEncashment" asp-controller="Admin"><i class="fa fa-circle-o"></i> <span class="nav-label">Approved</span> </a></li>
+                            }
+                        </ul>
+                    </li>
+                    @if (ViewBag.Role == "ADMIN")
+                    {
+                        <li id="product_codes">
+                            <a asp-area="" asp-controller="Admin" asp-action="Empty"><i class="fa fa-bar-chart-o"></i> <span class="nav-label">Product Codes</span><span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level collapse">
+                                <li><a asp-action="NewMemberCodes" asp-controller="Admin"><i class="fa fa-circle-o"></i> <span class="nav-label">New Member</span> </a></li>
+                                <li><a asp-action="RepeatPurchaseCodes" asp-controller="Admin"><i class="fa fa-circle-o"></i> <span class="nav-label">Repeat Purchase</span> </a></li>
+                            </ul>
+                        </li>
+                    }
+
+                    <li id="investors">
+                        <a asp-area="" asp-controller="Admin" asp-action="Empty"><i class="fa fa-user-times"></i> <span class="nav-label">Investors</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            <li><a asp-action="JuniorList" asp-controller="Admin"><i class="fa fa-circle-o"></i> <span class="nav-label">Junior Stockist</span> </a></li>
+                            <li><a asp-action="SeniorList" asp-controller="Admin"><i class="fa fa-circle-o"></i> <span class="nav-label">Senior Stockist</span> </a></li>
+                            <li><a asp-action="MegaList" asp-controller="Admin"><i class="fa fa-circle-o"></i> <span class="nav-label">Mega Stockist</span> </a></li>
+                        </ul>
+                    </li>
+                    @*<li id="commission">
+                            <a asp-area="" asp-controller="Admin" asp-action="Empty"><i class="fa fa-money"></i> <span class="nav-label">Commission</span> </a>
+                        </li>*@
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+                        @*<form role="search" class="navbar-form-custom" method="post" action="#">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                                </div>
+                            </form>*@
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to RAPS Nutri-Pharma</span>
+                        </li>
+                        <li>
+                            <a asp-area="" asp-controller="Account" asp-action="Logout">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            @RenderBody()
+            <div class="footer">
+                @*<div class="pull-right">
+                        10GB of <strong>250GB</strong> Free.
+                    </div>*@
+                <div>
+                    <strong>Copyright</strong> RAPS Nutri-Pharma &copy; 2016-2017
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <environment include="Development">
+        @*Main Scripts*@
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="~/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        @*Custom and Plugins*@
+        <script src="~/js/inspinia.js"></script>
+        <script src="~/js/plugins/pace/pace.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="~/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        @*Custom and Plugins*@
+        <script src="~/js/inspinia.js"></script>
+        <script src="~/js/plugins/pace/pace.min.js"></script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

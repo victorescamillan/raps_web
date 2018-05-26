@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewData["Title"] = "RetailProfit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row wrapper page-heading">
+    <div class="col-lg-12">
+        <br />
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li class="active">
+                <strong>Retail Profit</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <div class="list-group">
+                    <a class="list-group-item active" href="#">
+                        <h3 class="list-group-item-heading">Retail Profit</h3>
+                    </a>
+                </div>
+                <br/>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th class="text-left text-navy"><h2 class="font-bold">Product</h2></th>
+                            @*<th class="text-right text-navy"><h2 class="font-bold">PV </h2></th>*@
+                            <th class="text-right text-navy"><h2 class="font-bold">Members Price</h2></th>
+                            <th class="text-right text-danger"><h2 class="font-bold">Suggested Retail Price</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-left"><h3>MXG 600mg</h3> (60veggie caps/bottle)</td>
+                            @*<td class="text-right"><h2>60 PV</h2></td>*@
+                            <td class="text-right"><h2>P 650.00</h2></td>
+                            <td class="text-right text-danger"><h2>P 900.00</h2></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><h3>Spiru C 600mg</h3> (60veggie caps/bottle)</td>
+                            @*<td class="text-right"><h2>60 PV</h2></td>*@
+                            <td class="text-right"><h2>650.00</h2></td>
+                            <td class="text-right text-danger"><h2>900.00</h2></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"><h3>Xtrim Coffee 5.5gms</h3> (15 sachets/box)</td>
+                            @*<td class="text-right"><h2>20 PV</h2></td>*@
+                            <td class="text-right"><h2>300.00</h2></td>
+                            <td class="text-right text-danger"><h2>450.00</h2></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

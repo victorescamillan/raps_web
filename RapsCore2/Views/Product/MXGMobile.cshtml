@@ -1,0 +1,90 @@
+﻿@model Product;
+@{
+    ViewData["Title"] = "MXG";
+    Layout = "~/Views/Shared/_ProductLayout.cshtml";
+}
+
+<div class="wrapper wrapper-content animated fadeInRight">
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="ibox product-detail">
+                <div class="ibox-content" id="product-wrapper">
+
+                    <div class="row" id="product-image">
+                        <div class="col-md-5">
+
+
+                            <div class="product-images">
+
+                                <div>
+                                    <div class="image-imitation">
+                                        <img src="~/images/landing/mxg.jpg" alt="MXG" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="image-imitation">
+                                        <img src="~/images/landing/mxg_bot.png" alt="MXG" />
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="m-t-md">
+                                <br />
+                                <h2 class="product-main-price">&nbsp;&nbsp; <span class="navy">Php. @Model.Srp</span> <small class="text-muted">SRP Price</small> </h2>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+
+                            <h2 class="font-bold m-b-xs">
+                                @Model.Descrip
+                            </h2>
+                            <span class="navy">
+                                <small>@Model.Tagline</small>
+                            </span>
+
+                            <hr>
+
+                            <h3>Product description</h3>
+
+                            <div class="small text-muted" id="product-descrip">
+                                <p>
+                                    Moringa Oleifera is the best known of the 13 species moringacaea. Today, more and more people are appreciating moringa’s important value on nutrition and preventive medicine. It has been claimed that moringa leaves can prevent over 300 types of diseases. Gram for gram, the exceptionally nutritious and relatively high in medicinal value, moringa leaves helps handle: abnormal BP, anemia, anxiety, asthma, blackheads, blood impurities, bronchitis, chest congestion, cholera, conjunctivitis, colitis, coughs, diabetes, diarrhea, dropsy, eye/ear infections, fever, glandular swelling, gonorrhea, headaches, hysteria, intestinal worms, jaundice, lactation problem, malaria, joint pains, pimples, pregnancy, psoriasis, respiratory disorder, scurvy, skin infections, sores, sore throat, sprain, semen deficiency, stomach ulcers, tuberculosis, tumors, urinary disorder, dysentery, dengue, and more…
+                                    <br />
+                                    <br />
+                                    Garcinia Mangostana(mangosteen) considered as the antioxidant fruit with the rind containing a class of naturally occurring polyphenolic compound known as Xanthones. XANTHONES provide beneficial effects on cardiovascular problems, ischemic heart disease, atherosclerosis, hypertension and thrombosis. Its compound has antibacterial, antifungal, antihistamine, anti-inflammatory and antitumor activity. Mangosteen shows vasorelaxant properties, inhibitory action against Mycobacterium tuberculosis and Staphylococcus aureus; shown activity against several cancer cell lines including breasts, liver and leukemia. Mangosteen is regarded as one of the best natural resources of concentrated antioxidants, that the human body needs to help rid itself of free radicals, which lead to signs of aging as well as cellular damage. Mangosteen has been recognized and highly recommended by alnernative medicine practitioners.
+
+                                    <br />
+                                    <br />
+                                    Grape Seed Extract (GSE) substantially increased levels of antioxidants in the blood, Vitamin E, flavonoids, linoleic acid and pycnogenols. Oligomeric proanthocyanidins are highly concentrated in Grape Seed Extract. Extracts from Grape Seeds treat a range of health problems related to free radical damages, blood sugar problem, heart disease, cancer and of the liver. GSE help prevent cholesterol oxidation and damage to the cardiovascular system in people who smoke. Effectively prevents damage to liver cells caused by chemotherapy medications. Improves vision, relieves chronic venous insufficiency & varicose veins, PMS, circulatory disorders and cirrhosis. Enhances the immune system, nourish and tightens the skin, reverse aging process, normalizes blood sugar and HBP, and, a lot more of known chronic ailments…
+
+                                    <br />
+                                    <br />
+                                    MXG synergistic blend prevents aging; prevents allergic reactions; prevents arthritis; protects body from bacterial and viral infections; prevents kidney stone formation; anti-fungal; helps relieve fatigue; prevents glaucoma; helps with inflammation; helps in lowering blood fat; alleviates nerve pains; helps prevent the loss of bone mass; rich in antioxidants; anti-anxiety; prevents vertigo or dizziness; tumor and cancer preventive; alleviates parkinson’s; cardio-protective; helps stabilize blood sugar; hypotensive (helps lower blood pressure); boost immune system; helps prevent cognitive decline, and, more….with , MXG the body is superbly healthy and protected from ailments 24/7…
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('.product-images').slick({
+                dots: true
+            });
+
+        });
+
+    </script>
+}

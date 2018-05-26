@@ -1,0 +1,549 @@
+﻿
+@{
+    ViewData["Title"] = "Stockist Program";
+    Layout = "~/Views/Shared/_MemberLayout.cshtml";
+}
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <br />
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Member" asp-action="Dashboard">Dashboard</a>
+            </li>
+            <li class="active">
+                <strong>Stockist Program</strong>
+            </li>
+        </ol>
+    </div>
+    <div class="col-lg-2">
+    </div>
+</div>
+<div class="wrapper wrapper-content">
+    <div class="row wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="product-list">
+                    <h3>PRODUCT LIST</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>PRODUCT</th>
+                                <th class="text-center">PV</th>
+                                <th class="text-right">DISTRIBUTOR'S PRICE</th>
+                                <th class="text-right">RETAIL PRICE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MXG  600mg X 60 veggie capsules</td>
+                                <td class="text-center">60 PV</td>
+                                <td class="text-right">P 650.00</td>
+                                <td class="text-right">P 900.00</td>
+                            </tr>
+                            <tr>
+                                <td>SpiruC  600mg X 60 veggie capsules</td>
+                                <td class="text-center">60 PV</td>
+                                <td class="text-right">P 650.00</td>
+                                <td class="text-right">P 900.00</td>
+                            </tr>
+                            <tr>
+                                <td>XtrimCoffee  5.5gms X 15 sachets/box</td>
+                                <td class="text-center">20 PV</td>
+                                <td class="text-right">300.00</td>
+                                <td class="text-right">450.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <h3>ENTRY PACK COMPOSITION at P 1,800.00</h3>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-danger m-r-sm">A</button>
+                                    1 bottle MXG        60’s       +   1 bottle SpiruC 60’s
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-info m-r-sm">B</button>
+                                    1 bottle MXG        60’s       +   2 boxes XtrimCoffee 15’s  (30 sachets)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-warning m-r-sm">C</button>
+                                    1 bottle SpiruC 60s        +   2 boxes XtrimCoffee 15’s  (30 sachets)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-success m-r-sm">D</button>
+                                    4 boxes XtrimCoffee (60 sachets)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+            <div class="col-lg-6">
+                <div>
+                    <h3>MONTHLY MAINTENANCE PRODUCT CHOICE</h3>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-danger m-r-sm">A</button>
+                                    1 bottle MXG at 650.00 (60PV)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-info m-r-sm">B</button>
+                                    bottle  SpiruC at 650.00 (60PV)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="btn btn-warning m-r-sm">C</button>
+                                    1 box  XtrimCoffee at 300.00 (20PV)
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>MINI MOBILE STOCKIST</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <h4 class="font-bold">Gross Investment:  P 13,400.00 <span class="label label-primary pull-right">Bonus Rank:  BRONZE </span></h4>
+
+                    </div>
+
+                    <h4 class="font-bold text-success">INITIAL INVENTORY: <span class="text-danger">(WITH PRODUCT/PIN CODES)</span></h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="text-navy"> ENTRY PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    5 packs at P 1,800.00
+                                </td>
+                                <td class="text-right">
+                                    P 9,000.00
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 3.5%
+                                </td>
+                                <td class="text-right">
+                                    315.00
+                                </td>
+                                <td class="text-right font-bold">8,685.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-navy"> INDIVIDUAL PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    MXG 2 bots   at P 650.00
+                                </td>
+                                <td class="text-right">
+                                    P 1,300.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    Spiru C 2 bots   at  650.00
+                                </td>
+                                <td class="text-right">
+                                    1,300.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Xtrim coffee   6 boxes at  300.00
+                                </td>
+                                <td class="text-right">
+                                    1,800.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 2.5%
+                                </td>
+                                <td class="text-right">
+                                    110.00
+                                </td>
+                                <td class="text-right font-bold">4,290.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-right">
+                                    <h4>NET INVESTMENT  </h4>
+                                </td>
+                                <td class="text-right"><h4>P 12,975.00</h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5 class="text-navy"></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>JUNIOR MOBILE STOCKIST</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <h4 class="font-bold">Gross Investment:  P 30,000.00 <span class="label label-primary pull-right">Bonus Rank:  SILVER </span></h4>
+
+                    </div>
+
+                    <h4 class="font-bold text-success">INITIAL INVENTORY: <span class="text-danger">(WITH PRODUCT/PIN CODES)</span></h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="text-navy"> ENTRY PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    10packs at P 1,800.00
+                                </td>
+                                <td class="text-right">
+                                    P 9,000.00
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 5%
+                                </td>
+                                <td class="text-right">
+                                    900.00
+                                </td>
+                                <td class="text-right font-bold">17,100.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-navy"> INDIVIDUAL PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    MXG 6 bots   at P 650.00
+                                </td>
+                                <td class="text-right">
+                                    3,900.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    Spiru C 6 bots   at  650.00
+                                </td>
+                                <td class="text-right">
+                                    3,900.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Xtrim coffee   14 boxes at  300.00
+                                </td>
+                                <td class="text-right">
+                                    4,200.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 3.5%
+                                </td>
+                                <td class="text-right">
+                                    420.00
+                                </td>
+                                <td class="text-right font-bold">11,580.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-right">
+                                    <h4>NET INVESTMENT  </h4>
+                                </td>
+                                <td class="text-right"><h4>P 28,680.00</h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5 class="text-navy">FREE PRODUCTS: 1bot MXG/1bot SpiruC/ 1 box Xtrim Coffee</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>SENIOR MOBILE STOCKIST</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <h4 class="font-bold">Gross Investment:  P 76,000.00 <span class="label label-warning pull-right">Bonus Rank:  GOLD </span></h4>
+
+                    </div>
+
+                    <h4 class="font-bold text-success">INITIAL INVENTORY: <span class="text-danger">(WITH PRODUCT/PIN CODES)</span></h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="text-navy"> ENTRY PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    Entry Pack 30packs at P  1,800.00
+                                </td>
+                                <td class="text-right">
+                                    P  54,000.00
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 7.5%
+                                </td>
+                                <td class="text-right">
+                                    4,050.00
+                                </td>
+                                <td class="text-right font-bold">P 49,950.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-navy"> INDIVIDUAL PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    MXG 10 bots at P 650.00
+                                </td>
+                                <td class="text-right">
+                                    P  6,500.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    Spiru C 10 bots   at  650.00
+                                </td>
+                                <td class="text-right">
+                                    6,500.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Xtrim coffee   30 boxes at  300.00
+                                </td>
+                                <td class="text-right">
+                                    9,000.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 5%
+                                </td>
+                                <td class="text-right">
+                                    1,100.00
+                                </td>
+                                <td class="text-right font-bold">P  20,900.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-right">
+                                    <h4>NET INVESTMENT  </h4>
+                                </td>
+                                <td class="text-right"><h4>P 70,850.00</h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5 class="text-navy">FREE PRODUCTS:  3 bots MXG/3 bots SpiruC /2 bxs XtrimCoffee without codes…</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>MEGA STOCKIST</h5>
+                    <div class="ibox-tools">
+                        <a class="collapse-link">
+                            <i class="fa fa-chevron-up"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="ibox-content">
+                    <div>
+                        <h4 class="font-bold">Gross Investment:  P 220,000.00 <span class="label label-info pull-right">Bonus Rank:  DIAMOND </span></h4>
+
+                    </div>
+
+                    <h4 class="font-bold text-success">INITIAL INVENTORY: <span class="text-danger">(WITH PRODUCT/PIN CODES)</span></h4>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td class="text-navy"> ENTRY PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    Entry Pack 100 packs at P  1,800.00
+                                </td>
+                                <td class="text-right">
+                                    P  180,000.00
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 10%
+                                </td>
+                                <td class="text-right">
+                                    18,000.00
+                                </td>
+                                <td class="text-right font-bold">P 162,000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-navy"> INDIVIDUAL PACK</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    MXG 25 bots at P 650.00
+                                </td>
+                                <td class="text-right">
+                                    P  16,250.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+
+                                <td class="text-right">
+                                    Spiru C 25 bots   at  650.00
+                                </td>
+                                <td class="text-right">
+                                    6,500.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Xtrim coffee   25 boxes at  300.00
+                                </td>
+                                <td class="text-right">
+                                    7,500.00
+                                </td>
+                                <td class="text-right"></td>
+                            </tr>
+                            <tr>
+                                <td class="text-right">
+                                    Less 7.5%
+                                </td>
+                                <td class="text-right">
+                                    3,000.00
+                                </td>
+                                <td class="text-right font-bold">P  37,000.00</td>
+                            </tr>
+                            <tr>
+                                <td class="text-right"></td>
+                                <td class="text-right">
+                                    <h4>NET INVESTMENT  </h4>
+                                </td>
+                                <td class="text-right"><h4>P 199,000.00</h4></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h5 class="text-navy">FREE PRODUCTS: 10 bots MXG/10 bots SpiruC/4 bxs XtrimCoffee</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row wrapper wrapper-content animated fadeInRight">
+        <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-content">
+                    <h4>FREE PRODUCTS ARE GIVEN W/O CODES FOR STOCKIST’S PERSONAL  USE TO AVAIL THE FREE GOODS FOR STOCKIST’ IN ITS NEXT PURCHASES THE AMOUNT SHOULD BE:</h4>
+                    <br />
+                    <h3 class="text-warning"><span class="fa fa-id-card"></span> P30,000.00 GROSS FOR JUNIOR MOBILE STOCKISTS</h3>
+                    <h3 class="text-danger"><span class="fa fa-id-card"></span> P76,000.00 GROSS FOR SENIOR MOBILE STOCKISTS</h3>
+                    <h3 class="text-navy"><span class="fa fa-id-card"></span> P220,000.00 FOR MEGA STOCKISTS…</h3>
+                    <br />
+                    <h4>ALL SHIPMENTS FOR INITIAL INVENTORIES OR UPON STOCKISTSHIP ARE FREE. HOWEVER, IN REPEAT PURCHASES “FREE FREIGHT & HANDLING” SHALL ONLY BE FOR REPEAT PURCHASES OF P30,000.00 GROSS VALUE AND ABOVE…</h4>
+
+                    <h4 class="text-navy">LESS THAN P30,000.00 A F/H OF 10% OF GROSS VALUE SHALL BE ADDED…</h4>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+
+        $(document).ready(function () {
+            $('#side-menu li').each(function () {
+                $(this).removeClass('active');
+            });
+            $('#stockist').addClass('active');
+        });
+    </script>
+}

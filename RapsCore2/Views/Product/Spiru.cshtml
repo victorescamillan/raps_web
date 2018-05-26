@@ -1,0 +1,107 @@
+﻿@model Product;
+@{
+    ViewData["Title"] = "Spiru";
+    Layout = "~/Views/Shared/_ProductLayout.cshtml";
+}
+
+<div class="row wrapper border-bottom white-bg page-heading">
+    <div class="col-lg-10">
+        <h2>Spiru product detail</h2>
+        <ol class="breadcrumb">
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            </li>
+            <li>
+                <a asp-area="" asp-controller="Home" asp-action="Index">Product</a>
+            </li>
+            <li class="active">
+                <strong>Spiru</strong>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="wrapper wrapper-content animated fadeInRight" >
+    <div class="row">
+        <div class="col-lg-12">
+
+            <div class="ibox product-detail">
+                <div class="ibox-content" id="product-wrapper">
+
+                    <div class="row" id="product-image">
+                        <div class="col-md-5">
+
+
+                            <div class="product-images">
+
+                                <div>
+                                    <div class="image-imitation">
+                                        <img src="~/images/landing/spiru.jpg" alt="Spiru" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="image-imitation">
+                                        <img src="~/images/landing/spiruc_bot.png" alt="Spiru" />
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="m-t-md">
+                                <br />
+                                <h2 class="product-main-price">&nbsp;&nbsp; <span class="navy">Php. @Model.Srp</span> <small class="text-muted">SRP Price</small> </h2>
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+
+                            <h2 class="font-bold m-b-xs">
+                                @Model.Descrip
+                            </h2>
+                            <span class="navy">
+                                <small>@Model.Tagline</small>
+                            </span>
+
+                            <hr>
+
+                            <h3>Product description</h3>
+
+                            <div class="small text-muted" id="product-descrip">
+                                <p>
+                                    SPIRULINA is a microscopic, spiral-like blue green algae that exist as a single celled organism which turns sunlight into life energy. SPIRULINA is a powerful food with a huge potential as a whole food source, medicine and biochemical resource. SPIRULINA has been described as a “probiotic” and “super food” and is used as a therapeutic food supplement in many developed countries today. Scientific research suggest Spirulina have a potent anti-cancer properties, that can protect the body’s cellular system against free radical damage and successfully treats liver disease. 3 grams daily of Spirulina delivers impressive amount of vitamins B12 & B complex, iron, essential trace minerals, amino acids, beta carotene, gamma linoleic acid, phytonutrients and functional nutrients. SPIRULINA is effective in the treatment of patients withdrawing from cocaine and clearing the body of heavy metals such as cadmium, lead and mercury.
+
+                                    <br />
+                                    <br />
+                                    PRIMARY APPLICATIONS OF SPIRULINA blood builder, hepatitis, blood purifier, hypoglycemia, gastritis, glaucoma, chronic fatigue, malnutrition, diabetes & obesity.
+
+                                    <br />
+                                    <br />
+                                    SECONDARY APPLICATIONS OF SPIRULINA allergies, goiter, anemia, gout, appetite suppressant, arthritis, skin problems, BP disorders, liver disease, ulcers…
+
+                                    <br />
+                                    <br />
+                                    WITH SODIUM ASCORBATE the healing non-acidic Vitamin C,  is unbeatable in its class…
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('.product-images').slick({
+                dots: true
+            });
+
+        });
+
+    </script>
+}
